@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Internee.pk |Pakistan's Virtual Internship Program</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+    background-color: white;
+    scroll-behavior: smooth;
+  }
+  .navbar-custom {
+    background-color: white; /* Change the background color */
+    border-bottom: 2px solid white; /* Add a border at the bottom */
+  }
+  
+  .navbar-custom .navbar-brand {
+    color: white; /* Change the brand text color */
+  }
+  
+  .navbar-custom .navbar-brand img {
+    height: 50px; /* Adjust the logo height as needed */
+    width: auto; /* Ensure the logo width adjusts proportionally */
+    mix-blend-mode: darken;
+  }
+  
+  .navbar-custom .navbar-nav {
+    margin: 0 auto; /* Center the navigation links */
+    text-align: center; /* Align the text to center */
+  }
+  
+  .navbar-custom .navbar-nav .nav-item {
+    margin: 0 15px; /* Adjust the spacing between links */
+  }
+  
+  .navbar-custom .navbar-nav .nav-link {
+    color: black; /* Change the link text color */
+  }
+  
+  .navbar-custom .navbar-nav .nav-link:hover {
+    color: green; /* Change the link text color on hover */
+  }
+  
+  .navbar-custom .navbar-toggler-icon {
+    background-color: white; /* Change the color of the navbar toggle icon */
+  }
+  
+  .navbar-custom .navbar-toggler {
+    border-color: white; /* Change the border color of the navbar toggle button */
+  }
+  .btn-green{
+    background-color: green;
+    color: white;
+  }
+  
+  .hero-section {
+    position: relative;
+    height: 70vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('images/close-up-young-business-team-working.jpg') center/cover no-repeat;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.4s ease;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(96, 179, 96, 0.5);
+  }
+  
+  .hero-section.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .display-4 {
+    font-size: 4em;
+    margin-top: 190px;
+    margin-bottom: 30px;
+  }
+.display-5{
+  text-align: center;
+  position: relative;
+  font-size: 1.2em;
+  margin-top:-1px;
+}
+  
+      .about-section {
+        background-color: #f4f4f4;
+        padding: 50px 0;
+    }
+  
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+  
+    .row {
+        display: flex;
+        align-items: center;
+    }
+  
+    .col-lg-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+  
+    .about-heading {
+        font-size: 2em;
+        color: #333;
+    }
+  
+    .about-content {
+        font-size: 1.2em;
+        color: black;
+    }
+  
+    .about-image {
+        width: 100%;
+        border-radius: 8px;
+    }
+  
+    /* Initial state for fade-up animation */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.9s ease;
+  }
+  
+  .fade-up.in-view {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  
+  .container {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  
+  footer {
+    background-color: white; /* Footer background color */
+    color: black; /* Text color */
+    padding: 2px 0;
+  }
+  
+  .footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-column {
+    flex: 1;
+    margin-right: 15px; /* Adjust spacing between columns */
+  }
+  
+  .footer-bottom {
+    background-color: green; /* Footer bottom background color */
+    color: black; /* Text color */
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .footer-bottom a {
+    color: black;
+    margin: 0 10px;
+  }
+  
+  .footer-logo {
+    max-width: 200px; /* Adjust the maximum width of the logo */
+    margin-bottom: 10px;
+    margin-right: 1px;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-links i {
+    margin-right: 5px;
+  }
+  
+  .footer-links a {
+    color: black; /* Text color */
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input {
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 15%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    margin: 25px 780px;
+    text-align: center;
+    background-color: rgb(14, 2, 2);
+    color: #fff; /* Text color */
+    font-weight: bold;
+    cursor: pointer;
+  }
+  button:hover{
+    background-color: blue;
+
+  }
+  
+      .overlay-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 100, 0, 0.5); /* Adjust the alpha value for the overlay transparency */
+        color: #fff; /* Text color on the overlay */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Align text to the left */
+    }
+  .fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.9s ease;
+  }
+  
+  .fade-up.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Adjust the image size and styling as needed */
+  .section-image {
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    
+  }
+  
+  /* Style the heading and text */
+  .section-content {
+    padding: 40px;
+    text-align: left;
+  }
+  
+  .section-content h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  
+  .section-content p {
+    font-size: 1.2em;
+    float: left;
+    width: 30%;
+  }
+/* Custom CSS for job listings */
+
+/* Adjust spacing between job listings */
+.job-thumb {
+    margin-bottom: 20px; /* Adjust the spacing as needed */
+}
+
+/* Style the job card */
+.job-thumb-box {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+/* Add a hover effect to the job card */
+.job-thumb-box:hover {
+    transform: translateY(-5px); /* Lift the card on hover */
+}
+
+/* Customize the apply button */
+.custom-btn {
+    background-color: #43a724; /* Green background color */
+    color: #fff; /* White text color */
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+/* Add a hover effect to the apply button */
+.custom-btn:hover {
+    background-color: #36a319; /* Darker green on hover */
+}
+
+
+ /*---------testimonals-------*/
+ .testimonials {
+  width: 110%;
+  margin: auto;
+  padding-top: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+  text-align: center;
+}
+.testimonials-col {
+ flex-basis: 43%;
+ border-radius: 20px;
+ margin-right: 10px;
+ margin-top: 2%;
+ margin-bottom: 2%;
+ text-align: left;
+ background: skyblue;
+ padding: 11px;
+ 
+}
+.testimonials-container {
+  position: relative;
+  margin: auto;
+  max-width: 90%;
+  overflow: hidden;
+  padding-right: 8%;
+}
+
+.testimonials-slides {
+  display: flex;
+}
+
+.testimonials-col img {
+  height: 50px;
+  margin-left: 5px;
+  margin-right: 30px;
+  border-radius: 55%;
+}
+.testimonials-col h3{
+  text-align: left;
+  margin: relative;
+  margin-top: 1px;
+ }
+.testimonials-col .fa{
+  color: #f44336;  
+  margin-top: 2%;
+}
+@media(max-width:700px){
+  .testimonials-col img{
+    margin-left: 5px;
+    margin-right: 30px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
+    </style>
+
+</head>
+<body>
+<div class="hero-section fade-up">
+  <div class="overlay">
+  <div class="container">
+      <div class="hero-text">
+     <h1 class="display-4 "><b>Welcome to internee.pk!</b></h1>
+    <p class="display-5"><emp> At internee.pk, we are dedicated to connecting students, recent graduates, and professionals with<br> exciting internship opportunities across various industries. Whether you are looking to gain valuable work experience,<br> develop your skills, or jumpstart your career, our platform offers a
+       wide<br> range of internships tailored to your interests and career goals</emp></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <nav class="navbar navbar-expand-md fixed-top navbar-custom">
+        <a class="navbar-brand" href="#">
+          <img src="images/internee logo.jpg" alt="Your Logo" > <!-- Replace "your-logo.png" with your actual logo path -->
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a style="color: green;" class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.internee.pk/company.html">Company Collaborations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.internee.pk/web-design.html">Internships</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.internee.pk/contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://learn.internee.pk">LMS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://job.internee.pk">Job Portal</a>
+            </li>
+            
+            <li class="nav-item">
+           <a class="btn btn-green" href="https://portal.internee.pk/" role="button">Internee login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="about-section fade-up">
+        <div class="container">
+            <div class="row align-items-center">
+          <div class="col-lg-6">
+           <h2 class="about-heading">Introducing Internee.pk</h2>
+           <p class="about-content">
+           The ultimate platform designed to turbocharge the IT sector in Pakistan! We recognize the immense potential of talented individuals in the country and aim to bridge the gap between them and the thriving IT industry. Internee.pk offers a comprehensive range of virtual internship opportunities exclusively in the IT field.
+           </p>
+           </div>
+        <div class="col-lg-6">
+         <img src="images/people.jpg" alt="Company Image" class="about-image">
+         </div>
+            </div>
+        </div>
+    </section>
+
+<h1 style="text-align:center; margin-top: 5px;"><strong>Internships We Offer</strong></h1>
+
+        <!-- Machine Learning -->
+        <div class="container">
+          <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="job-thumb job-thumb-box">
+            <div class="job-image-box-wrap"></div>
+              <a href="/web-development.html">
+             <img
+              height="130"
+             src="images/BackendDevelopment.jpeg"
+             class="job-image img-fluid"
+            alt=""
+                />
+              </a>
+            <div class="job-body"></div>
+              <h4 class="job-title">
+                <a href="/web-development.html" class="job-title-link">
+              Backend Development</a>
+              </h4>
+
+              <div class="d-flex align-items-center border-top pt-3">
+                <a
+             href="/web-development.html"
+             style="background-color: #43a724; color: #fefefe"
+             class="custom-btn btn ms-auto"
+             >Apply now</a>       
+           </div>
+          </div>
+        </div>
+     
+        <!-- Mobile Development-->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="job-thumb job-thumb-box">
+            <div class="job-image-box-wrap">
+              <a href="https://www.internee.pk/mobile-development.html">
+                <img
+             height="130"
+             src="images/Mobile App Developer.jpeg"
+             class="job-image img-fluid"
+              alt=""
+                />
+              </a>
+            </div>
+            <div class="job-body">
+              <h4 class="job-title">
+                <a
+                  href="https://www.internee.pk/mobile-development.html"
+                  class="job-title-link"
+                  >App Development Internship</a
+                >
+              </h4>
+              <div class="d-flex align-items-center border-top pt-3"></div>
+                <a
+             href="https://www.internee.pk/mobile-development.html"
+             style="background-color: #43a724; color: #fefefe"
+             class="custom-btn btn ms-auto"
+             >Apply now</a>
+              </div>
+            </div>
+          </div>
+       
+        <!--front end development--->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="job-thumb job-thumb-box">
+            <div class="job-image-box-wrap">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAZ9eVpOfpmtPZwP8Em1cUx6WaKSuFVEPAoL3Zx8hWoOg1tw/closedform">
+             <img
+             height="130"
+             src="images/FrontEnd.jpeg"
+            class="job-image img-fluid"
+             alt=""
+                />
+              </a>
+            </div>
+            <div class="job-body">
+              <h4 class="job-title">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSdAZ9eVpOfpmtPZwP8Em1cUx6WaKSuFVEPAoL3Zx8hWoOg1tw/closedform"
+                  class="job-title-link"
+                  >Frontend Development Internship</a>
+              </h4>
+              <div class="d-flex align-items-center border-top pt-3"></div>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSdAZ9eVpOfpmtPZwP8Em1cUx6WaKSuFVEPAoL3Zx8hWoOg1tw/closedform"
+                  style="background-color: #43a724; color: #fefefe"
+                  class="custom-btn btn ms-auto"
+                  >Apply now</a>
+                  </div>  
+                </div>
+              </div>
+         
+        <!-- Graphic Design -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="job-thumb job-thumb-box">
+            <div class="job-image-box-wrap">
+              <a href="https://www.internee.pk/graphic.html">
+            <img
+             height="130"
+             src="images/logo-designer-working-computer-desktop.jpg"
+             class="job-image img-fluid"
+            alt=""
+                />
+              </a>
+            </div>
+
+            <div class="job-body"></div>
+              <h4 class="job-title">
+                <a href="https://www.internee.pk/graphic.html" class="job-title-link"
+                  >Graphic Design</a
+                >
+              </h4>
+
+              <div class="d-flex align-items-center border-top pt-3">
+                <a
+                  href="https://www.internee.pk/graphic.html"
+                  style="background-color: #43a724; color: #fefefe"
+                  class="custom-btn btn ms-auto"
+                  >Apply now</a>
+                  </div>
+              </div>
+            </div>
+        
+        <!-- Chatbot Development -->
+
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="job-thumb job-thumb-box">
+            <div class="job-image-box-wrap">
+              <a href="https://www.internee.pk/chatbot.html">
+                <img
+               height="130"
+               src="images/chatbotDevelopment.jpeg"
+              class="job-image img-fluid"
+               alt=""
+                />
+              </a>
+
+            <div class="job-body"></div>
+              <h4 class="job-title">
+                <a href="https://www.internee.pk/chatbot.html" class="job-title-link"
+                  >Chatbot Development</a
+                >
+              </h4>
+              <div class="d-flex align-items-center border-top pt-3">
+                <a
+                  href="https://www.internee.pk/chatbot.html"
+                  style="background-color: #43a724; color: #fefefe"
+                  class="custom-btn btn ms-auto"
+                  >Apply now</a>
+                </div>
+              </div>
+            </div></div>
+  
+       <!-- CyberSecuirty -->
+
+       <div class="col-lg-4 col-md-6 col-12">
+        <div class="job-thumb job-thumb-box">
+          <div class="job-image-box-wrap">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5vM8tV8vOwnXLXkHSfMUZs6tLWIVv7dcnPTLB2Jh2DYbcjg/closedform">
+              <img
+                height="130"
+                src="images/hack.jpeg"
+                class="job-image img-fluid"
+                alt=""
+              />
+            </a>
+
+          <div class="job-body"></div>
+            <h4 class="job-title">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5vM8tV8vOwnXLXkHSfMUZs6tLWIVv7dcnPTLB2Jh2DYbcjg/closedform" class="job-title-link"
+                >CyberSecuirty</a
+              >
+            </h4>
+            <div class="d-flex align-items-center border-top pt-3">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSd5vM8tV8vOwnXLXkHSfMUZs6tLWIVv7dcnPTLB2Jh2DYbcjg/closedform"
+        style="background-color: #43a724; color: #fefefe"
+         class="custom-btn btn ms-auto"
+         >Apply now</a>
+           </div>
+            </div>
+          </div></div>
+
+           <!-- Flutter Development -->
+
+       <div class="col-lg-4 col-md-6 col-12">
+        <div class="job-thumb job-thumb-box">
+          <div class="job-image-box-wrap">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKt0T2qtUlau5tR1EsDoin2NNgtvqq4VJ2r7wb8lDCOx8ckg/closedform">
+              <img
+             height="130"
+            src="images/flutter.png"
+            class="job-image img-fluid"
+                alt=""
+              />
+            </a>
+
+          <div class="job-body"></div>
+            <h4 class="job-title">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKt0T2qtUlau5tR1EsDoin2NNgtvqq4VJ2r7wb8lDCOx8ckg/closedform" class="job-title-link"
+                >Flutter Development</a
+              >
+            </h4>
+            <div class="d-flex align-items-center border-top pt-3">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfKt0T2qtUlau5tR1EsDoin2NNgtvqq4VJ2r7wb8lDCOx8ckg/closedform"
+                style="background-color: #43a724; color: #fefefe"
+                class="custom-btn btn ms-auto"
+                >Apply now</a>
+              </div>
+            </div>
+          </div></div>
+        <!-- Job Analysis -->
+
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="job-thumb job-thumb-box">
+            <div class="job-image-box-wrap">
+              <a
+                href="https://docs.google.com/forms/d/1_bHw7VJtORYTRULqAjlRvhhxkRRQRCpGOVmMcEgApyU/"
+              >
+           <img
+             height="130"
+           src="images/analysis.jpg"
+           class="job-image img-fluid"
+         alt=""
+           />
+         </a>
+
+            <div class="job-body"></div>
+              <h4 class="job-title">
+                <a
+                  href="https://docs.google.com/forms/d/1_bHw7VJtORYTRULqAjlRvhhxkRRQRCpGOVmMcEgApyU/"
+                  class="job-title-link"
+                  >Data Analytics</a
+                >
+              </h4>
+
+              <div class="d-flex align-items-center border-top pt-3">
+                <a
+                  href="https://docs.google.com/forms/d/1_bHw7VJtORYTRULqAjlRvhhxkRRQRCpGOVmMcEgApyU/"
+                  style="background-color: #43a724; color: #fefefe"
+                  class="custom-btn btn ms-auto"
+                  >Apply now</a>
+                </div></div> </div>
+            </div>
+      </div></div>
+      <a href="https://www.internee.pk/web-design.html"><button>See more</button></a>
+
+
+         </section>      
+
+    <div class="section-image fade-up" style="background-image: url('images/millennial-group-young-businesspeople.jpg');">
+        <div class="overlay-image">
+       <div class="section-content">
+         <h1>Internships every month</h1>
+        <p>Introducing Internee.pk, the ultimate platform designed to turbocharge the IT sector in Pakistan! We recognize the immense potential of talented individuals in the country and aim to bridge the gap between them and the thriving IT industry. Internee.pk offers a comprehensive range of virtual internship opportunities exclusively in the IT field.</p>
+            </div>
+        </div>
+    </div>  
+
+
+    <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  
+  <section class="testimonials"><br>
+       <h1>What Our Students Says</h1>
+            <div class="testimonials-container">
+              <div class="testimonials-slides">
+                <div class="testimonials-col">
+              <img src="images/girl.jpg" alt="Madiha Rehman">
+              <h3>Madiha Rehman</h3>
+              <p>Internee.pk provides a comprehensive platform  with diverse 
+                internship opportunities</p>
+              <div class="rating">
+                  <!-- Full Star Icons -->
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <!-- Half-Blank Star Icon -->
+                  <i class="fa fa-star-half-o"></i>
+              </div>
+          </div>
+          <div class="testimonials-col">
+              <img src="images/boy1.jpg" alt="Muhammad Sultan">
+              <h3>Muhammad Sultan</h3>
+              <p>I have learned a lot of stuff from here, have acquired great skills to build websites</p>
+              
+              <div class="rating">
+                  <!-- Full Star Icons -->
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <!-- Blank Star Icon -->
+                  <i class="fa fa-star-o"></i>
+              </div>
+              </div>
+              <div class="testimonials-col">
+                <img src="images/boy2.jpg" alt="Muhammad Sultan">
+                <h3>Saad Khan</h3>
+                <p>By completing this internship i have gained valuable skills that are helping me in making my future bright </p>
+                
+                <div class="rating">
+                    <!-- Full Star Icons -->
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <!-- Blank Star Icon -->
+                    <i class="fa fa-star-o"></i>
+                </div>
+                </div>
+                <div class="testimonials-col">
+                  <img src="images/boy3.jpg" alt="Muhammad Sultan">
+                  <h3>Hammad Ali</h3>
+                  <p>As a begineer I have gained skills making me proficient in building amazing websites </p>
+                  
+                  <div class="rating">
+                      <!-- Full Star Icons -->
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <!-- Blank Star Icon -->
+                      <i class="fa fa-star-o"></i>
+                  </div>
+                  </div>
+                </div> 
+                  <a class="prev" onclick="plusTestimonials(-1)">&#10094;</a>
+                  <a class="next" onclick="plusTestimonials(1)">&#10095;</a>
+                </div> 
+  </section>
+
+  <!--footer--->
+<footer data-os="fade-up">
+  <div class="container">
+      <div class="footer-columns">
+          <!-- Column 1 -->
+          <div class="footer-column">
+              <img src="images/internee logo.jpg" alt="Your Logo" class="footer-logo">
+              
+              <ul class="footer-links">
+                  <li><i class="fas fa-globe"></i><a href="www.internee.pk">www.internee.pk</a></li>
+                  <li><i class="fas fa-phone"></i><a href="tel:+1234567890">+123 456 7890</a></li>
+                  <li><i class="fas fa-envelope"></i><a href="mailto:info@internee.pk">info@internee.pk</a></li>
+              </ul>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="footer-column">
+              <h4>Company</h4>
+              <ul class="footer-links">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Internships</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="footer-column">
+              <h4>Resources</h4>
+              <ul class="footer-links">
+                  <li><a href="#">Resources</a></li>
+                  <li><a href="#">Discord Server</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Podcast</a></li>
+              </ul>
+          </div>
+    </div>
+</div>
+</div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <!-- Social Media Icons with Links -->
+    <div>
+      <a href="https://www.instagram.com/internee.pk/" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://twitter.com/Internee_pk" target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/internee-pk-1ba44a276/" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.facebook.com/people/Internee-Pk/pfbid0vbi5B4aza1q2HVkmeKtzKSRYNGcUwWQZenQKEVMDJLFjwQJpz5XkmryHcwEpmCXLl/" target="_blank">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.youtube.com/channel/UCKmNYb6PiShShRf-ZI2O8Ag" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+    <p>&copy; 2024 Internee Website. All rights reserved.</p>
+  </div>
+</footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+</script>
+<script src="path/to/aos.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        AOS.init({
+            duration: 800, // Adjust the duration of the animation
+            once: false, // Allow animation to occur multiple times
+        });
+
+        // Add a class to the hero-section, about-section, and section-image when scrolling down
+        function checkScroll() {
+            var heroSection = document.querySelector('.hero-section');
+            var aboutSection = document.querySelector('.about-section');
+            var sectionImage = document.querySelector('.section-image');
+            var footer = document.querySelector('footer');
+            var footerBottom = document.querySelector('.footer-bottom');
+
+            // Check hero-section
+            var heroBounding = heroSection.getBoundingClientRect();
+            if (heroBounding.top >= 0) {
+                heroSection.classList.add('in-view');
+            } else {
+                heroSection.classList.remove('in-view');
+            }
+
+            // Check about-section
+            var aboutBounding = aboutSection.getBoundingClientRect();
+            if (aboutBounding.top >= 0) {
+                aboutSection.classList.add('in-view');
+            } else {
+                aboutSection.classList.remove('in-view');
+            }
+
+            // Check section-image
+            var sectionImageBounding = sectionImage.getBoundingClientRect();
+            if (sectionImageBounding.top >= 0) {
+                sectionImage.classList.add('in-view');
+            } else {
+                sectionImage.classList.remove('in-view');
+            }
+            var footerBounding = footer.getBoundingClientRect();
+            if (footerBounding.top >= 0) {
+                footer.classList.add('in-view');
+            } else {
+                footer.classList.remove('in-view');
+            }
+            var footerBottomBounding = footerBottom.getBoundingClientRect();
+            if (footerBottomBounding.top <= window.innerHeight && footerBottomBounding.bottom >= 0) {
+                footerBottom.classList.add('in-view');
+            } else {
+                footerBottom.classList.remove('in-view');
+            }
+        }
+
+        // Check on page load
+        checkScroll();
+
+        // Check on scroll
+        window.addEventListener('scroll', checkScroll);
+
+        // Manually trigger AOS refresh after new content is added
+        
+    });
+</script>
+<script>
+var slideIndex = 0;
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("testimonials-col");
+  // Hide all testimonials
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  // Display two testimonials starting from slideIndex
+  for (i = slideIndex; i < slideIndex + 2; i++) {
+    if (slides[i]) {
+      slides[i].style.display = "block";
+    }
+  }
+}
+
+function plusSlides(n) {
+  slideIndex += n * 2; // Increment or decrement by 2 to move by pairs
+  var slides = document.getElementsByClassName("testimonials-col");
+  // Wrap around if reaching the end
+  if (slideIndex >= slides.length) {
+    slideIndex = 0;
+  } else if (slideIndex < 0) {
+    slideIndex = slides.length - 2; // Show the last pair if going backwards from the first pair
+  }
+  showSlides();
+}
+
+</script>
+</body>
+</html>
